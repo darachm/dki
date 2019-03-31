@@ -1,4 +1,11 @@
 
+.PHONY: reading all
+all: reading
+
+reading: reading.html
+	mv $< old_$<
+	firefox old_$<
+
 reading.html: gnostic_reader.py gnostic.yaml
 	python3 $< > $@
 
