@@ -14,7 +14,7 @@ def parseOutNotes( list_of_ps ):
     # record it
     while list_of_ps:
         i = list_of_ps.pop(0)
-        if re.search("Line",str(i)): 
+        if re.search("Line-[0-9]",str(i)): 
             list_of_ps.insert(0,i)
             break
         return_string += str(i)

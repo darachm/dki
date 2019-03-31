@@ -1,7 +1,9 @@
 
+reading.html: gnostic_reader.py gnostic.yaml
+	python3 $< > $@
 
-gnostic.yaml: dekorne_gnostic_pages
-	python3 gnostic_parser.py
+gnostic.yaml: gnostic_parser.py dekorne_gnostic_pages
+	python3 $<
 
 hexagrams.json: 
 	wget raw.githubusercontent.com/ablwr/i-ching/master/js/hexagrams.js -O - \
