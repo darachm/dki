@@ -27,7 +27,7 @@ print("<h1 class=\"hexagram\">"+this_hex_number+" "+this_hex_hexagram+"</h1>")
 print(hexes["hex"+this_hex_number]["notes"])
 for i in range(6):
     if changing_lines[i] == 1:
-        print("<hr/><h2>Changing line "+str(i)+"</h2>")
+        print("<hr/><h2>Changing line "+str(i+1)+"</h2>")
         print(hexes["hex"+this_hex_number]["lines"][i])
 if this_hex_number is not changed_hex_number:
     print("<hr>")
