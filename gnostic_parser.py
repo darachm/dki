@@ -9,6 +9,9 @@ def parseOutNotes( list_of_ps ):
     # scan for it
     while list_of_ps:
         i = list_of_ps.pop(0)
+        if re.search("HEXAGRAM NUMBER",str(i)):
+            return_string += str(i)
+            return_string += str(list_of_ps.pop(0))
         if re.search("NOTES AND PARAPHRASES",str(i)):
             break
     # record it
